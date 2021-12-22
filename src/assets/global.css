@@ -10,7 +10,12 @@ body,
 /* container */
 .container {
   @apply max-w-screen-sm border rounded bg-white p-2 shadow-md sm:m-auto sm:my-8;
-  min-height: 50vh;
+  min-height: 100vh;
+}
+@media (min-width: 640px) {
+  .container {
+    min-height: 50vh;
+  }
 }
 
 /* title */
