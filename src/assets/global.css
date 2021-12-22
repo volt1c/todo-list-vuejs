@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+#app {
+  @apply bg-gray-200 min-h-full m-0;
+}
+
+/* container */
+.container {
+  @apply max-w-screen-sm border rounded bg-white p-2 shadow-md m-1 sm:m-auto sm:my-8;
+  min-height: 50vh;
+}
+
+/* title */
+.title {
+  @apply font-bold text-2xl w-full py-3 px-2
+  border-b border-gray-100;
+}
+
+/* list */
+.list {
+  @apply w-full mt-2;
+}
+
+.list li {
+  @apply px-5 py-0.5 w-full;
+}
+
+/* fixed-link */
+.fixed-link {
+  @apply p-1 bg-white 
+  border rounded-md shadow 
+  fixed right-1 top-1 
+  transition duration-300 ease-in-out;
+}
+
+.fixed-link:hover {
+  @apply top-2 bg-gray-100;
+}
+
+/* add-task */
+.add-task {
+  @apply flex items-center px-0 py-0.5 mx-4;
+}
+.add-task-input {
+  @apply appearance-none bg-transparent border-none w-full text-gray-700 mr-3 pt-1 px-2 leading-tight focus:outline-none;
+}
+.add-task-btn {
+  @apply flex-shrink-0 border-transparent text-sm border-4 my-0.5 p-0 rounded-md hover:bg-gray-100;
+}
+
+/* task-item */
+.task-li {
+  @apply w-full flex flex-row;
+}
+
+.task-label {
+  @apply inline-block text-gray-800 px-2 w-full;
+}
+
+.task-btn-del {
+  @apply hover:text-red-600 float-right mt-0.5;
+}
+
+.strike {
+  @apply line-through text-gray-300;
+  text-decoration-color: rgb(209 213 219);
+}
