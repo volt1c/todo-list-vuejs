@@ -9,7 +9,7 @@ body,
 
 /* container */
 .container {
-  @apply max-w-screen-sm border rounded bg-white p-2 shadow-md m-1 sm:m-auto sm:my-8;
+  @apply max-w-screen-sm border rounded bg-white p-2 shadow-md sm:m-auto sm:my-8;
   min-height: 50vh;
 }
 

@@ -2,7 +2,6 @@
   <div id="app">
     <div class="container">
       <h1 class="title">Get Sh*t Done:</h1>
-
       <ul class="list">
         <task-item v-for="todo in todos" :key="todo.id" v-bind:task="todo" />
       </ul>
