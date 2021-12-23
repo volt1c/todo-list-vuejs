@@ -20,12 +20,14 @@ export default {
   components: {
     Trash2Icon,
   },
-  data: () => ({
-    id: this.task.id,
-    value: this.task.value,
-    isDone: this.task.isDone,
-    isDeleted: false,
-  }),
+  data() {
+    return {
+      id: this.task.id,
+      value: this.task.value,
+      isDone: this.task.isDone,
+      isDeleted: false,
+    };
+  },
   methods: {
     close() {
       const id = this.id;
