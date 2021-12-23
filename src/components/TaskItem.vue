@@ -20,7 +20,7 @@ export default {
   components: {
     Trash2Icon,
   },
-  data: function () {
+  data() {
     return {
       id: this.task.id,
       value: this.task.value,
@@ -32,7 +32,7 @@ export default {
     close() {
       const id = this.id;
       const cookies = getCookiesObject();
-      cookies.todos = cookies.todos.filter(function (task) {
+      cookies.todos = cookies.todos.filter(task => {
         return task.id != id;
       });
       setCookiesObject(cookies);
@@ -41,11 +41,11 @@ export default {
     },
   },
   watch: {
-    isDone: function (v) {
+    isDone(value) {
       const id = this.id;
       const cookies = getCookiesObject();
-      cookies.todos = cookies.todos.map(function (task) {
-        if (task.id == id) task.isDone = v;
+      cookies.todos = cookies.todos.map(task => {
+        if (task.id == id) task.isDone = value;
         return task;
       });
       setCookiesObject(cookies);

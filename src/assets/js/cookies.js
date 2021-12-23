@@ -1,9 +1,5 @@
 function getCookiesObject() {
-  try {
-    return JSON.parse(document.cookie);
-  } catch (err) {
-    return {};
-  }
+  return JSON.parse(document.cookie || '{}');
 }
 function setCookiesObject(obj) {
   return (document.cookie = JSON.stringify(obj));

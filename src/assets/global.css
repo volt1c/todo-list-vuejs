@@ -2,14 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-body,
-#app {
-  @apply bg-gray-200 min-h-full m-0;
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+
+  @apply bg-gray-200 min-h-full min-w-full grid place-items-center;
+  display: grid;
+  place-items: center;
+  resize: both;
+  overflow: auto;
 }
 
 /* container */
 .container {
-  @apply max-w-screen-sm border rounded bg-white p-2 shadow-md sm:m-auto sm:my-8;
+  @apply max-w-screen-sm w-full border rounded bg-white p-2 shadow-md sm:m-auto  sm:w-3/4;
   min-height: 100vh;
 }
 @media (min-width: 640px) {
