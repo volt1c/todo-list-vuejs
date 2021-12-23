@@ -1,19 +1,13 @@
 <template>
-  <div id="app">
+  <div>
     <div class="container">
       <h1 class="title">Get Sh*t Done:</h1>
       <ul class="list">
         <task-item v-for="todo in todos" :key="todo.id" v-bind:task="todo" />
       </ul>
       <div class="add-task">
-        <input
-          class="add-task-input"
-          id="input"
-          type="text"
-          placeholder="add sh*t to list"
-          v-model="newTask"
-        />
-        <button class="add-task-btn" type="button" v-on:click="() => {addTodo();reloadTodos()}">
+        <input class="add-task-input" type="text" placeholder="add sh*t to list" v-model="newTask" />
+        <button class="add-task-btn" type="button" v-on:click="addTodo()">
           <plus-icon size="1.5x" />
         </button>
       </div>
@@ -50,10 +44,8 @@ export default {
       });
       setCookiesObject(obj);
 
-      this.newTask = '';
-    },
-    reloadTodos() {
       this.todos = getCookiesObject().todos;
+      this.newTask = '';
     },
   },
   components: {
