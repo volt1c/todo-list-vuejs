@@ -32,12 +32,10 @@ import { getCookiesObject, setCookiesObject } from './assets/js/cookies';
 
 export default {
   name: 'App',
-  data: function () {
-    return {
-      todos: getCookiesObject().todos,
-      newTask: '',
-    };
-  },
+  data: () => ({
+    todos: getCookiesObject().todos,
+    newTask: '',
+  }),
   methods: {
     addTodo() {
       if (this.newTask.trim() == '')
@@ -66,4 +64,4 @@ export default {
 };
 </script>
 
-<style src="./assets/global.css">
+<style src="./assets/global.css"/>
