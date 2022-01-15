@@ -1,8 +1,8 @@
 <template>
   <li v-if="!isDeleted" class="task-li">
-    <input type="checkbox" v-bind:checked="isDone" v-model="isDone" />
-    <label class="task-label" v-bind:class="isDone ? 'strike' : ''">{{ value }}</label>
-    <button type="button" class="task-btn-del" v-on:click="close()">
+    <input type="checkbox" :checked="isDone" v-model="isDone" />
+    <label class="task-label" :class="isDone ? 'strike' : ''">{{ value }}</label>
+    <button type="button" class="task-btn-del" @click="close()">
       <trash-2-icon size="1.25x" />
     </button>
   </li>
