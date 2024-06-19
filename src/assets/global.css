@@ -9,11 +9,21 @@ body {
   min-height: 100%;
 
   @apply bg-gray-200 min-h-full min-w-full grid place-items-center;
+  display: grid;
+  place-items: center;
+  resize: both;
+  overflow: auto;
 }
 
 /* container */
 .container {
-  @apply min-h-[100vh] sm:min-h-[50vh] max-w-screen-sm w-full border rounded bg-white p-2 shadow-md sm:m-auto sm:w-3/4;
+  @apply max-w-screen-sm w-full border rounded bg-white p-2 shadow-md sm:m-auto  sm:w-3/4;
+  min-height: 100vh;
+}
+@media (min-width: 640px) {
+  .container {
+    min-height: 50vh;
+  }
 }
 
 /* title */
