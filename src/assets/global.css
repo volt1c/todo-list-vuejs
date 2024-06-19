@@ -26,6 +26,7 @@ body {
 .list {
   @apply w-full mt-2;
 }
+
 .list li {
   @apply px-5 py-0.5 w-full;
 }
@@ -37,6 +38,7 @@ body {
   fixed right-1 top-1 
   transition duration-300 ease-in-out;
 }
+
 .fixed-link:hover {
   @apply top-2 bg-gray-100;
 }
@@ -56,9 +58,11 @@ body {
 .task-li {
   @apply w-full flex flex-row;
 }
+
 .task-label {
   @apply inline-block text-gray-800 px-2 w-full;
 }
+
 .task-btn-del {
   @apply hover:text-red-600 float-right mt-0.5;
 }
