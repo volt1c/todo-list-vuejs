@@ -1,24 +1,37 @@
-<script setup lang="ts">
-import GithubCorner from './components/GithubCorner.vue'
-import TaskItem from './components/TaskItem.vue'
-import AddTask from './components/AddTask.vue'
-import { getCookiesObject } from './utils/cookies'
-import { ref } from 'vue'
-
-const tasks = ref(getCookiesObject().tasks)
-
-function reloadTasks() {
-  tasks.value = getCookiesObject().tasks
-}
-</script>
-
 <template>
   <div class="container">
     <h1 class="title">Get Sh*t Done:</h1>
     <ul class="list">
-      <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+      <task-item v-for="todo in todos" :key="todo.id" :task="todo" />
     </ul>
-    <AddTask @reload="reloadTasks()" />
-    <GithubCorner href="https://github.com/volt1c/todo-list-vuejs" />
+    <add-task @reload="reloadTasks()" />
+    <github-corner href="https://github.com/volt1c/todo-list-vuejs" />
   </div>
 </template>
+
+<script>
+import GithubCorner from './components/GithubCorner';
+import TaskItem from './components/TaskItem';
+import AddTask from './components/AddTask';
+import { getCookiesObject } from './assets/js/cookies';
+
+export default {
+  name: 'App',
+  data: () => ({
+    todos: getCookiesObject().todos,
+    newTask: '',
+  }),
+  methods: {
+    reloadTasks() {
+      this.todos = getCookiesObject().todos;
+    },
+  },
+  components: {
+    TaskItem,
+    GithubCorner,
+    AddTask,
+  },
+};
+</script>
+
+<style src="./assets/global.css"/>
