@@ -4,30 +4,27 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0db9cf28-205c-4097-bdf8-d7d60312f05a/deploy-status)](https://app.netlify.com/sites/volt1c-todo-list-vuejs/deploys)
 
-## Project setup
 
-```
-yran install
-```
+## Project Setup
 
-### Compiles and hot-reloads for development
-
-```
-yarn serve
+```sh
+yarn
 ```
 
-### Compiles and minifies for production
+### Compile and Hot-Reload for Development
 
+```sh
+yarn dev
 ```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
 yarn build
 ```
 
-### Lints and fixes files
+### Lint with [ESLint](https://eslint.org/)
 
-```
+```sh
 yarn lint
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).

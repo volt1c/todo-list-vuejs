@@ -1,16 +1,14 @@
-/* eslint-disable no-undef */
-module.exports = {
-  mode: 'jit',
-  purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
-  darkMode: false, // or 'media' or 'class'
+/** @type {import('tailwindcss').Config} */
+export default {
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: {},
+      colors: {}
     },
     fontFamily: {
-      sans: ['"Courier New"', 'monospace'],
-    },
+      sans: ['"Courier New"', 'monospace']
+    }
   },
   variants: {},
-  plugins: [],
-};
+  plugins: []
+}
