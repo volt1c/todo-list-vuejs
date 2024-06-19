@@ -5,9 +5,12 @@
 html {
   height: 100%;
 }
-body {
-  min-height: 100%;
 
+body {
+  @apply h-screen w-screen;
+}
+
+#app {
   @apply bg-gray-200 min-h-full min-w-full grid place-items-center;
 }
 
